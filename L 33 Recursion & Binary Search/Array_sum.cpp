@@ -3,12 +3,12 @@ using namespace std;
 
 int arraysum(int* arr, int n)
 {
-    if ((n-1)==0)
+    if ((n)==0)
     {
-        return arr[0];/* code */
+        return 0;/* code */
     }
     
-    return arr[n-1] + arraysum(arr, n - 1);
+    return arraysum((arr+1), n - 1) + arr[0];
 }
 
 int main()
